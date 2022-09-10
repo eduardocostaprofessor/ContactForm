@@ -97,6 +97,7 @@ body {
     box-shadow: 0 0 5px rgba(255, 255, 255, .3);
     outline: none;
     border-radius: 3px;
+    transition: all .3s;
 }
 
 .formulario-contato .anotacoes {
@@ -106,8 +107,16 @@ body {
 
 .formulario-contato .entrada::placeholder,
 .formulario-contato .anotacoes::placeholder {
-    color: #18A2C9;
+    color: rgba(24, 162, 201, .4);
 }
+.formulario-contato .entrada:focus::placeholder {
+    color: white;
+}
+.formulario-contato .entrada:focus {
+    background-color: #72C3BD;
+    color: white;
+}
+
 
 .btn {
     display: inline-block;
@@ -121,6 +130,7 @@ body {
     border: 1px solid white;
     border-radius: 5px;
     cursor: pointer;
+    outline: none;
     opacity: 1;
     background-image: linear-gradient(to bottom, #18A2C9, #40adcb);
     transition: opacity .4s;
@@ -137,7 +147,9 @@ body {
 
 
 @media screen and (min-width: 768px) {
-
+    .container-grid {
+        max-width: 850px;
+    }
     .caixa-contato {
         width: 230px;
         height: 130px;
@@ -213,29 +225,30 @@ body {
         background-image: linear-gradient(to right, #18A2C9, #18A2C9, #72C3BD);
     }
 
-    .container-grid {
-        max-width: 992px;
-    }
+    
 
     .caixa-contato {
         margin: 15px auto;
-        width: 150px;
-        height: 90px;
+        width: 120px;
+        height: 80px;
+        box-shadow: 0 0 5px rgba(114, 195, 189, .8);
     }
 
-
-    .titulo {
+    .caixa-contato .icone-contato {
         font-size: 2rem;
+    }
+    .titulo {
+        font-size: 1.8rem;
         margin-bottom: 10px;
     }
 
     .descricao {
-        font-size: 1rem;
+        font-size: .9rem;
         margin-bottom: 10px;
     }
 
     .formulario-contato {
-        padding: 20px;
+        /* padding: 20px; */
         /* border: 1px solid #dfd36e; */
         border-radius: 12px;
     }
